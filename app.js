@@ -3,20 +3,20 @@ const nodemailer =require('nodemailer')
 const express = require('express')
 const mongoose = require('mongoose')
 const ejs = require('ejs')
-const mailSchema = require('./mailSchema')
+// const mailSchema = require('./mailSchema')
 // const hbs = require('nodemailer-express-handlebars')
 
 
 const app = express()
-const mongodb = 'mongodb+srv://dahumble:anuebunwada1.@mailer.7oecdwf.mongodb.net/my projects'
-mongoose.connect(mongodb) 
+// const mongodb = 'mongodb+srv://dahumble:anuebunwada1.@mailer.7oecdwf.mongodb.net/my projects'
+// mongoose.connect(mongodb) 
 
 
-.then(()=>{
-    console.log("datebase connected")
-}).catch((err)=>{
-   console.log(err, "Database connection failed")
-})
+// .then(()=>{
+//     console.log("datebase connected")
+// }).catch((err)=>{
+//    console.log(err, "Database connection failed")
+// })
 
 app.set('view engine', 'ejs')
 app.use('/assets', express.static('assets'))
@@ -57,12 +57,12 @@ app.post('/mailer', (req,res)=>{
                 
             })
             console.log(mails.email)
-            await mails.save()
+            // await mails.save()
         }catch(err){
             console.log(err.message)
         }
     }
-    // res.render('success')
+    res.render('success')
 
     //step 1 config the transporter
 const transporter = nodemailer.createTransport({
@@ -81,13 +81,13 @@ const mailOptions = {
     to: details.email,
     subject: details.subject,
     text:  details.mail,
-    attachments:[
-        {
-            filename:details.attach
-            // path:"assets/logo.jpg"
+    // attachments:[
+    //     {
+    //         // filename:details.attach
+    //         // path:"assets/logo.jpg"
 
-        }
-    ]
+    //     }
+    // ]
 }
 
 transporter.sendMail(mailOptions, (error, info)=>{
