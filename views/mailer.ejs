@@ -6,44 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mailer package</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
 </head>
 <body>
+    <div class="wrapper animated bounceInLeft">
     <div class="container">
-    <h1>Mailer</h1>
-    <form action="/mailer" method="post">
-        <label for="from">Email of sender:</label>
-        <input type="text" id="email" name="from" placeholder="Enter your email">
-        <br>
-        <br>
-
-        <label for="password">Password:</label> 
-        <input type="text" id="email" name="password" placeholder="Enter your password">
-        <br>
-        <br>
-       
-        <label for="email">Email of receiver:</label> 
-        <input type="text" id="email" name="email" placeholder="you can add multiply emails by seperating  with a comma (,)">
-
-            <br>
-            <br>
-       
-         <label for="subject">Suject:</label>
-         <input type="text" id="suject" name="subject" placeholder="Subject of the mail">
-            <br>
-            <br>
+        <div class ="info">
+           
+            <ul>
+                <li><i class="fa fa-road"></i>designed by Anuebunwa Daniel</li>
+                <li><i class="fa fa-phone"></i>contact: +2348036541679</li>
+                <li><i class="fa fa-envelope"></i>anuebunwadaniel66@gmail.com</li>
+                <li><i class="fa fa-github"></i> GitHub: Anuebunwa-daniel</i></li>
+              </ul>
+              
+    
+        </div>
+    <div class="contact">
+    
+    <form method="post" action="/mailer" class ="contact-form">
         
+        <p>
+        <label>Email of sender:</label>
+        <input type="email" id="email" name="from" placeholder="Enter your email">
+    </p>
+    
+    <p>
+        <label for="password">Password:</label> 
+        <input type="text" id="password" name="password" placeholder="Enter your password">
+    </p>
+        
+     <p>
+      
+        <label for="email">Email of receiver:</label> 
+        <input type="text" id="rec" name="email" placeholder="you can add multiply emails by seperating  with a comma (,)">
+    </p>
+        
+    <p>   
+    <label for="subject">Subject:</label>
+         <input type="text" id="subject" name="subject" placeholder="Subject of the mail">
+    </p>
+           
+    <p class="full">
         <label for="mail">Mail:</label>
-        <textarea type="text" id="mail" name="mail" placeholder="Content of the  mail"></textarea>
-            <br>
-            <br>
+        <textarea type="text" id="mail" name="mail" rows="5" placeholder="Content of the  mail"></textarea>
+    </p>
             
-            <label for="attach">Add an Attachment:</label>
-            <input type="file" id="attach" name="attach"  >
-         <br><br>  
-            
-    <input type="submit" type="submit"  id="submit">
+        
+     <p class ="full">       
+   <button type="submit">Send mail</button>
+</p>
 
     </form>
     </div>
+  
+</div>
+</div>
+    <!-- <script src="assets/script.js"></script> -->
 </body>
 </html>
