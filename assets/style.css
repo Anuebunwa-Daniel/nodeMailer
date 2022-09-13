@@ -51,9 +51,9 @@ h1{
 .wrapper{
     box-shadow: 0 0 20px 0 black;
 }
-.wrapper > *{
+/* .wrapper > *{
     padding: 1em;
-  }
+  } */
 
 
 ul{
