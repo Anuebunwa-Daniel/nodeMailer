@@ -96,10 +96,12 @@ ul{
  }
 
  @media screen and (max-width:700px){
-    .wrapper{
     
+        .wrapper{
+            box-shadow: 0 0 20px 0 black;
+        }
         
-    } .container{
+    .container{
         display:block;
         
     }
